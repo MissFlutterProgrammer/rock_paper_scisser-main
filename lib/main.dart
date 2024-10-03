@@ -1,5 +1,6 @@
-import 'dart:math';
+// ignore_for_file: library_private_types_in_public_api
 
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,7 +40,9 @@ class _GameApplicationState extends State<GameApplication> {
                 height: 100.0,
               ),
               TextButton(
-                style: TextButton.styleFrom(primary: Colors.white),
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.white,
+                ),
                 onPressed: () {
                   setState(() {
                     top = Random().nextInt(3) + 1; //0-2-> 1 3
@@ -89,7 +92,9 @@ class Application extends StatelessWidget {
                   image: AssetImage('images/$top.png'),
                 ),
                 TextButton(
-                  style: TextButton.styleFrom(primary: Colors.white),
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.white,
+                  ),
                   onPressed: () {
                     top = 3;
                     bottom = 1;
